@@ -1,0 +1,17 @@
+[project]
+name = "transcribe"
+version = "0.1.0"
+description = "Transcribe audio/video files with Whisper large-v3-turbo via DeepInfra or OpenAI"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["openai>=1.0", "python-dotenv"]
+
+[project.scripts]
+transcribe = "transcribe:main"
+
+[dependency-groups]
+dev = ["pytest"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
